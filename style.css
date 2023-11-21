@@ -184,8 +184,8 @@ img {
 }
 
 .socials-link-icon {
-    height: 40px;
-    width: 40px;
+    height: 2vw;
+    width: 2vw;
 }
 
 #about {
@@ -213,7 +213,7 @@ img {
 }
 
 #other-stuff {
-    text-align: left;
+    text-align: center;
     height: 100vh;
     margin-left: 12vw;
     margin-right: 12vw;
@@ -224,13 +224,13 @@ img {
 
 .other-stuff h1 {
     color: rgb(115, 148, 173);
-    font-size: 70px;
+    font-size: 100px;
     letter-spacing: 0.2ch;
-    font-family: 'American Typewriter Regular';
+    font-family: 'Bellenia Love';
 }
 
 .other-stuff p {
     font-family: 'Inconsolata';
     color: rgb(196, 202, 217);
-    font-size: 20px;
+    font-size: 24px;
 }
