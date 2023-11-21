@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Bellenia Love';
+    src: url('components/Bellenia\ Love.otf');
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('components/Inconsolata.otf');
+}
+
+@font-face {
+    font-family: 'American Typewriter Regular';
+    src: url('components/American\ Typewriter\ Regular.ttf');
+}
+
+div.clickEffect{
+    position: fixed;
+    box-sizing: border-box;
+    border-style:solid;
+    border-color: rgb(115, 148, 173);
+    border-radius:50%;
+    animation: clickEffect 0.4s ease-out;
+    z-index: 99999;
+}
+
+@keyframes clickEffect{
+    0% {
+        opacity: 1;
+        width: 0.25em; 
+        height: 0.25em;
+        margin: -0.125em;
+        border-width: 0.25em;
+    }
+    100% {
+        opacity:0.2;
+        width: 4em; 
+        height: 4em;
+        margin: -2em;
+        border-width: 0.03em;
+    }
+}
+
+body {
+    /* display: block; */
+    min-height: 400vh;
+    min-width: 100%;
+}
+
+header {
+    padding-left: 12vw;
+    padding-right: 12vw;;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    pointer-events: none;
+    cursor: default;
+}
+
+.logo {
+    margin-top: 0.5em;
+    font-family: 'Bellenia Love';
+    font-size: 3em;
+    letter-spacing: 0.2ch;
+    color: rgb(115, 148, 173);
+    user-select: none;
+}
+
+.navigation a {
+    font-family: 'American Typewriter Regular';
+    position: relative;
+    font-size: 1.25em;
+    color: rgb(115, 148, 173);
+    text-decoration: none;
+    margin: 40px;
+}
+
+.navigation a:hover {
+    color: rgb(115, 148, 173);
+    text-decoration: none;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(115, 148, 173);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: right;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#intro {
+    margin-left: 12vw;
+    margin-right: 12vw;
+    width: 76vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+}
+
+.greeting {
+    height: 50vh;
+    width: 32vw;
+}
+
+.greeting p {
+    color: rgb(196, 202, 217);
+    font-size: 1.5vw;
+    font-family: 'Inconsolata';
+    text-align: left;
+    letter-spacing: 0.2ch;
+}
+
+.greeting h1 {
+    color: rgb(115, 148, 173);
+    font-size: 6.82vw;
+    font-family: 'Bellenia Love';
+    letter-spacing: 0.2ch;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#intro-img {
+    width: 22vw;
+}
+
+.message {
+    text-align: left;
+    align-self: end;
+    width: 22vw;
+}
+
+.message p {
+    color: rgb(196, 202, 217);
+    font-size: 1.15vw;
+    font-family: 'Inconsolata';
+} 
+
+.message h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(115, 148, 173);
+    font-size: 2vw;
+    font-family: 'American Typewriter Regular';
+    letter-spacing: 0.2ch;
+}
+
+.socials {
+    column-gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.socials a {
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.socials-link-icon {
+    height: 40px;
+    width: 40px;
+}
+
+#about {
+    text-align: left;
+    margin-left: 12vw;
+    margin-right: 12vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.desc h1 {
+    color: rgb(115, 148, 173);
+    font-size: 100px;
+    letter-spacing: 0.2ch;
+    font-family: 'Bellenia Love';
+}
+
+.desc p {
+    color: rgb(196, 202, 217);
+    font-size: 24px;
+    font-family: 'Inconsolata';
+    letter-spacing: 0.2ch;
+}
+
+#other-stuff {
+    text-align: left;
+    height: 100vh;
+    margin-left: 12vw;
+    margin-right: 12vw;
+    position: relative;
+    /* display: grid; */
+    align-items: center;
+}
+
+.other-stuff h1 {
+    color: rgb(115, 148, 173);
+    font-size: 70px;
+    letter-spacing: 0.2ch;
+    font-family: 'American Typewriter Regular';
+}
+
+.other-stuff p {
+    font-family: 'Inconsolata';
+    color: rgb(196, 202, 217);
+    font-size: 20px;
+}
