@@ -117,7 +117,7 @@ img {
     display: grid;
     align-items: center;
     width: 76vw;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .intro-content {
@@ -141,15 +141,22 @@ img {
 
 .greeting h1 {
     color: rgb(115, 148, 173);
-    font-size: 6.5vw;
+    font-size: 6.4vw;
     font-family: 'Bellenia Love';
     letter-spacing: 0.2ch;
     text-align: left;
     margin-top: 20px;
 }
 
+.greeting img {
+    width: 10vw;
+    margin-top: 3vw;
+    margin-left: 18vw;
+}
+
 #intro-img {
-    width: 15vw;
+    width: 20vw;
+    border-radius: 190px;
 }
 
 .message {
@@ -176,7 +183,6 @@ img {
 .socials {
     column-gap: 50px;
     margin-top: 20px;
-    margin-bottom: 60px;
 }
 
 .socials a {
