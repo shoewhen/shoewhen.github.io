@@ -23,7 +23,20 @@
             <div class="greeting">
                 <p>Hi! My name is</p>
                 <h1>Shuwen Wei</h1>
-                <img src="components/smile.jpeg">
+                <div class="box">
+                    <a href="#about" class="rotate-text">
+                        <div class="text">
+                            <p>Scroll Down Scroll Down Scroll Down</p>
+                        </div>
+                        <script>
+                            const text = document.querySelector('.text p');
+                            text.innerHTML = text.innerText.split('').map(
+                                (char, i) =>
+                                `<span style="transform:rotate(${i * 10}deg)">${char}</span>`
+                            ).join('');
+                        </script>
+                    </a>
+                </div>
             </div>
             <img id="intro-img" src="components/miffy-portrait.png">
             <div class="message">
