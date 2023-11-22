@@ -55,11 +55,13 @@ body {
 header {
     padding-left: 12vw;
     padding-right: 12vw;;
-    position: absolute;
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+    z-index: 99;
 }
 
 img {
@@ -82,7 +84,7 @@ img {
     font-size: 1.25em;
     color: rgb(115, 148, 173);
     text-decoration: none;
-    margin: 40px;
+    margin-left: 20px;
 }
 
 .navigation a:hover {
@@ -110,22 +112,23 @@ img {
 }
 
 #intro {
-    margin-left: 12vw;
-    margin-right: 12vw;
-    width: 76vw;
+    margin: 0 12vw;
     height: 100vh;
     display: grid;
     align-items: center;
+    width: 76vw;
+    justify-content: space-between;
 }
 
 .intro-content {
+    column-gap: 2vw;
     display: flex;
     align-items: center;
 }
 
 .greeting {
     height: 50vh;
-    width: 32vw;
+    width: auto;
 }
 
 .greeting p {
@@ -138,7 +141,7 @@ img {
 
 .greeting h1 {
     color: rgb(115, 148, 173);
-    font-size: 6.82vw;
+    font-size: 6.5vw;
     font-family: 'Bellenia Love';
     letter-spacing: 0.2ch;
     text-align: left;
@@ -146,13 +149,13 @@ img {
 }
 
 #intro-img {
-    width: 22vw;
+    width: 15vw;
 }
 
 .message {
     text-align: left;
     align-self: end;
-    width: 22vw;
+    width: auto;
 }
 
 .message p {
@@ -173,7 +176,7 @@ img {
 .socials {
     column-gap: 50px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .socials a {
