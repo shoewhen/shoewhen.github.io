@@ -170,7 +170,7 @@ img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-image: url(components/arrow-down.png);
+    background-image: url(components/arrow-down.PNG);
     background-size: 50px;
     background-repeat: no-repeat;
     background-position: center;
@@ -201,7 +201,7 @@ img {
 
 #intro-img {
     width: 20vw;
-    border-radius: 190px;
+    border-radius: 10vw;
 }
 
 .message {
