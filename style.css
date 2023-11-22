@@ -242,6 +242,10 @@ img {
     width: 2vw;
 }
 
+
+
+
+
 #about {
     text-align: left;
     margin-left: 12vw;
@@ -249,7 +253,7 @@ img {
     height: 100vh;
     position: relative;
     display: flex;
-    align-items: center;
+    padding-top: 15vh;
 }
 
 .desc h1 {
