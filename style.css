@@ -47,6 +47,20 @@ div.clickEffect{
     }
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(181, 186, 200); 
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(115, 148, 173);
+}
+
 
 body {
     min-height: 400vh;
