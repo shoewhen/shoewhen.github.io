@@ -63,6 +63,8 @@ header {
     align-items: center;
     background-color: white;
     z-index: 99;
+    overflow: hidden;
+    height: 8vh;
 }
 
 img {
@@ -82,10 +84,10 @@ img {
 .navigation a {
     font-family: 'American Typewriter Regular';
     position: relative;
-    font-size: 1.25em;
+    font-size: 20px;
     color: rgb(115, 148, 173);
     text-decoration: none;
-    margin-left: 20px;
+    margin: 25px;
 }
 
 .navigation a:hover {
@@ -112,29 +114,30 @@ img {
     transform-origin: left;
 }
 
+
+
+
 #intro {
     margin: 0 12vw;
     height: 100vh;
     display: grid;
     align-items: center;
     width: 76vw;
-    /* justify-content: space-between; */
 }
 
 .intro-content {
-    column-gap: 2vw;
+    column-gap: 4vw;
     display: flex;
     align-items: center;
 }
 
 .greeting {
     height: 50vh;
-    width: auto;
-    flex-direction: column;
+    width: 28.2vw;
 }
 
 .greeting p {
-    color: rgb(196, 202, 217);
+    color: rgb(181, 186, 200);
     font-size: 1.5vw;
     font-family: 'Inconsolata';
     text-align: left;
@@ -143,17 +146,11 @@ img {
 
 .greeting h1 {
     color: rgb(115, 148, 173);
-    font-size: 6.4vw;
+    font-size: 6vw;
     font-family: 'Bellenia Love';
     letter-spacing: 0.2ch;
     text-align: left;
     margin-top: 20px;
-}
-
-.greeting img {
-    width: 10vw;
-    margin-top: 3vw;
-    margin-left: 18vw;
 }
 
 .box {
@@ -207,12 +204,11 @@ img {
 .message {
     text-align: left;
     align-self: end;
-    width: auto;
 }
 
 .message p {
-    color: rgb(196, 202, 217);
-    font-size: 1.15vw;
+    color: rgb(181, 186, 200);
+    font-size: 20.9px;
     font-family: 'Inconsolata';
 } 
 
@@ -220,9 +216,9 @@ img {
     margin-top: 10px;
     margin-bottom: 10px;
     color: rgb(115, 148, 173);
-    font-size: 2vw;
+    font-size: 37px;
     font-family: 'American Typewriter Regular';
-    letter-spacing: 0.2ch;
+    letter-spacing: 0.15ch;
 }
 
 .socials {
@@ -254,6 +250,11 @@ img {
     position: relative;
     display: flex;
     padding-top: 15vh;
+    justify-content: space-between
+}
+
+.desc {
+    padding-right: 60px
 }
 
 .desc h1 {
@@ -264,13 +265,52 @@ img {
 }
 
 .desc p {
-    color: rgb(196, 202, 217);
+    color: rgb(181, 186, 200);
     font-size: 24px;
     font-family: 'Inconsolata';
-    letter-spacing: 0.2ch;
+    line-height: 1.5;
+    border-bottom: 1px solid;
+    padding-bottom: 5vh;
 }
 
-#other-stuff {
+.bio-image {
+    width: 26vw;
+    margin-top: 3em;
+    margin-left: 8vw;
+}
+
+#attributes {
+    display: flex;
+    margin-top: 7vh;
+    column-gap: 9vw;
+}
+
+.topic {
+    font-size: 24px;
+    font-family: 'American Typewriter Regular';
+    font-weight: 600;
+    color: rgb(129, 152, 169);
+    letter-spacing: 0.1ch;
+}
+
+.topic-content {
+    font-size: 20px;
+    font-family: 'American Typewriter Regular';
+    color: rgb(157, 171, 183);
+    letter-spacing: 0.1ch;
+}
+
+#about img {
+    height: 75vh;
+    border-radius: 2vw;
+    border: 1px solid rgb(157, 171, 183);
+}
+
+
+
+
+.work {
+    padding-top: 15vh;
     text-align: center;
     height: 100vh;
     margin-left: 12vw;
@@ -280,14 +320,14 @@ img {
     align-items: center;
 }
 
-.other-stuff h1 {
+.work h1 {
     color: rgb(115, 148, 173);
     font-size: 100px;
     letter-spacing: 0.2ch;
     font-family: 'Bellenia Love';
 }
 
-.other-stuff p {
+.work p {
     font-family: 'Inconsolata';
     color: rgb(196, 202, 217);
     font-size: 24px;
