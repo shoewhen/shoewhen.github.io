@@ -270,6 +270,13 @@ header {
 
 
 
+.break {
+    height: 25vh;
+}
+
+
+
+
 
 #about {
     margin-left: auto;
