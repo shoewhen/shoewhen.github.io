@@ -62,9 +62,16 @@ div.clickEffect{
 }
 
 
+
+
 body {
     min-height: 400vh;
     min-width: 100%;
+}
+
+img {
+    pointer-events: none;
+    cursor: default;
 }
 
 header {
@@ -78,12 +85,7 @@ header {
     background-color: white;
     z-index: 99;
     overflow: hidden;
-    height: 8vh;
-}
-
-img {
-    pointer-events: none;
-    cursor: default;
+    height: 80px;
 }
 
 .logo {
@@ -270,46 +272,55 @@ img {
 
 
 #about {
-    text-align: left;
-    margin-left: 12vw;
-    margin-right: 12vw;
+    margin-left: auto;
+    margin-right: auto;
     height: 100vh;
-    position: relative;
-    display: flex;
-    padding-top: 15vh;
-    justify-content: space-between
+    padding-top: 80px;
 }
 
 .desc {
-    padding-right: 60px
+    text-align: center;
+    max-width: 980px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.desc h1 {
+.hello {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.hello span {
+    font-family: Bellenia Love;
+    font-size: 80px;
+    margin-left: 15px;
     color: rgb(115, 148, 173);
-    font-size: 100px;
-    letter-spacing: 0.2ch;
-    font-family: 'Bellenia Love';
+}
+
+.hello h1 {
+    margin-top: 18px;
+    color: rgb(115, 148, 173);
+    font-size: 38px;
+    letter-spacing: 0.1ch;
+    font-family: 'American Typewriter Regular';
 }
 
 .desc p {
+    margin-top: -20px;
     color: rgb(181, 186, 200);
-    font-size: 24px;
+    font-size: 22px;
     font-family: 'Inconsolata';
     line-height: 1.5;
-    border-bottom: 1px solid;
-    padding-bottom: 5vh;
 }
 
-.bio-image {
-    width: 26vw;
-    margin-top: 3em;
-    margin-left: 8vw;
-}
-
-#attributes {
+.attributes {
     display: flex;
-    margin-top: 7vh;
-    column-gap: 9vw;
+    margin-top: 25px;
+    justify-content: space-between;
+    margin-left: 12vw;
+    margin-right: 12vw;
+    align-items: center;
 }
 
 .topic {
@@ -327,10 +338,14 @@ img {
     letter-spacing: 0.1ch;
 }
 
-#about img {
-    height: 75vh;
-    border-radius: 2vw;
-    border: 1px solid rgb(157, 171, 183);
+.about-img {
+    height: 650px;
+    width: 450px;
+    border-radius: 500px;
+    border: 1px solid rgb(73, 110, 139);
+    padding: 20px;
+    object-fit: cover;
+    object-position: 25% 65%;
 }
 
 
