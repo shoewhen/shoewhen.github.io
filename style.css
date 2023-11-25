@@ -143,11 +143,13 @@ img {
     column-gap: 4vw;
     display: flex;
     align-items: center;
+    /* flex-wrap: wrap; */
 }
 
 .greeting {
-    height: 50vh;
-    width: 28.2vw;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
 }
 
 .greeting p {
@@ -167,16 +169,19 @@ img {
     margin-top: 20px;
 }
 
+.alignment {
+    margin-top: auto;
+    margin-left: auto;
+}
+
 .box {
-    display: flex;
-    justify-content: end;
     height: 150px;
-    margin-top: 9vw;
+    width: 150px;
 }
 
 .rotate-text {
-    display: flex;
-    margin-left: auto;
+    /* display: flex; */
+    /* margin-left: auto; */
     position: absolute;
     width: 150px;
     height: 150px;
@@ -218,6 +223,8 @@ img {
 .message {
     text-align: left;
     align-self: end;
+    /* width: 19.8vw; */
+    flex: 1;
 }
 
 .message p {
@@ -236,8 +243,9 @@ img {
 }
 
 .socials {
-    column-gap: 50px;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .socials a {
@@ -248,8 +256,13 @@ img {
 }
 
 .socials-link-icon {
-    height: 2vw;
-    width: 2vw;
+    height: 40px;
+    margin-right: 60px;
+}
+
+.insta-link-icon {
+    height: 30px;
+    margin-right: 40px;
 }
 
 

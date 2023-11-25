@@ -25,19 +25,21 @@
             <div class="greeting">
                 <p data-aos="fade-right" data-aos-duration="1000">Hi! My name is</p>
                 <h1 data-aos="fade-right" data-aos-duration="1000">Shuwen Wei</h1>
-                <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                    <a href="#about" class="rotate-text">
-                        <div class="text">
-                            <p>Scroll Down Scroll Down Scroll Down</p>
-                        </div>
-                        <script>
-                            const text = document.querySelector('.text p');
-                            text.innerHTML = text.innerText.split('').map(
-                                (char, i) =>
-                                `<span style="transform:rotate(${i * 10}deg)">${char}</span>`
-                            ).join('');
-                        </script>
-                    </a>
+                <div class="alignment" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="box">
+                        <a href="#about" class="rotate-text">
+                            <div class="text">
+                                <p>Scroll Down Scroll Down Scroll Down</p>
+                            </div>
+                            <script>
+                                const text = document.querySelector('.text p');
+                                text.innerHTML = text.innerText.split('').map(
+                                    (char, i) =>
+                                    `<span style="transform:rotate(${i * 10}deg)">${char}</span>`
+                                ).join('');
+                            </script>
+                        </a>
+                    </div>
                 </div>
             </div>
             <img id="intro-img" src="components/miffy-portrait.png" data-aos="fade-up" data-aos-duration="1500">
@@ -45,23 +47,21 @@
                 <p data-aos="fade-left" data-aos-duration="1000">High schooler passionate about</p>
                 <h1 data-aos="fade-left" data-aos-duration="1250">Computer Science</h1>
                 <p data-aos="fade-left" data-aos-duration="1500">
-                    Welcome to my little corner of the 
-                    <br>
-                    internet!
+                    Welcome to my little corner of the internet!
                     <br>
                     <br>
                 </p>
-                <p data-aos="fade-left" data-aos-duration="1750">Feel free to explore this website
-                    <br>
+                <p data-aos="fade-left" data-aos-duration="1750">
+                    Feel free to explore this website
                     and discover more about my journey
-                    <br>
-                    and interests :)</p>
+                    and interests :)
+                </p>
                 <div class="socials" data-aos="fade-left" data-aos-duration="2000">
                     <a href="https://github.com/shoewhen" target="_blank">
                         <img src="components/github-icon.png" class="socials-link-icon">
                     </a>
-                    <a href="">
-
+                    <a href="https://www.instagram.com/shaine.wei/" target="_blank">
+                        <img src="components/insta-icon.PNG" class="insta-link-icon">
                     </a>
                 </div>
             </div>
