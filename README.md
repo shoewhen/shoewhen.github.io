@@ -1,3 +1,3 @@
-# shoewhen.github.io
+# shoewhen Personal Website
 
-hello will this work
+Still a work in progress! Everything's a bit scuffed right now, but then again frontend isn't really my thing :]
