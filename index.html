@@ -1,386 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Shaine — Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="styles.css" />
-<!-- <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --white: #ffffff;
-    --off-white: #f7f6f3;
-    --light-gray: #e8e6e1;
-    --mid-gray: #9b9894;
-    --dark-gray: #2e2c29;
-    --black: #111110;
-    --serif: 'EB Garamond', Georgia, serif;
-    --mono: 'DM Mono', monospace;
-    --max: 860px;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: var(--serif);
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--black);
-    background: var(--white);
-  }
-
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 0.5px solid var(--light-gray);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2.5rem;
-    height: 56px;
-  }
-
-  .nav-name {
-    font-family: var(--mono);
-    font-size: 13px;
-    font-weight: 300;
-    letter-spacing: 0.06em;
-    color: var(--black);
-    text-decoration: none;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-family: var(--mono);
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 0.08em;
-    color: var(--mid-gray);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--black); }
-
-  /* SECTIONS */
-  section {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 6rem 2.5rem;
-  }
-
-  /* HERO */
-  #hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 5rem;
-    padding-top: 8rem;
-    border-bottom: 0.5px solid var(--light-gray);
-  }
-
-  .hero-tag {
-    font-family: var(--mono);
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    color: var(--mid-gray);
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-name {
-    font-size: clamp(3rem, 8vw, 5.5rem);
-    font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-name em {
-    font-style: italic;
-    color: var(--mid-gray);
-  }
-
-  .hero-desc {
-    font-size: 1.1rem;
-    color: var(--dark-gray);
-    max-width: 520px;
-    margin-bottom: 2.5rem;
-    line-height: 1.75;
-  }
-
-  .hero-links {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    font-family: var(--mono);
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 0.08em;
-    padding: 10px 20px;
-    border: 0.5px solid var(--black);
-    color: var(--black);
-    background: transparent;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-    cursor: pointer;
-    display: inline-block;
-  }
-  .btn:hover { background: var(--black); color: var(--white); }
-  .btn.filled { background: var(--black); color: var(--white); }
-  .btn.filled:hover { background: transparent; color: var(--black); }
-
-  /* SECTION HEADERS */
-  .section-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: 0.14em;
-    color: var(--mid-gray);
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 0.5px;
-    background: var(--light-gray);
-  }
-
-  /* ABOUT */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-
-  .about-text p {
-    color: var(--dark-gray);
-    margin-bottom: 1.2rem;
-    font-size: 1.05rem;
-  }
-
-  .about-details { padding-top: 0.25rem; }
-
-  .detail-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.75rem 0;
-    border-bottom: 0.5px solid var(--light-gray);
-    font-size: 0.9rem;
-  }
-  .detail-row:first-child { border-top: 0.5px solid var(--light-gray); }
-  .detail-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: 0.08em;
-    color: var(--mid-gray);
-    text-transform: uppercase;
-  }
-  .detail-value { color: var(--dark-gray); font-size: 0.95rem; }
-
-  /* SKILLS */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  .skill-group-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    color: var(--mid-gray);
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 0.5px solid var(--light-gray);
-  }
-
-  .skill-list {
-    list-style: none;
-  }
-
-  .skill-list li {
-    font-size: 0.95rem;
-    color: var(--dark-gray);
-    padding: 0.35rem 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .skill-list li::before {
-    content: '';
-    width: 3px;
-    height: 3px;
-    background: var(--mid-gray);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  /* RESEARCH */
-  .research-item {
-    padding: 2rem 0;
-    border-bottom: 0.5px solid var(--light-gray);
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 2rem;
-  }
-  .research-item:first-of-type { border-top: 0.5px solid var(--light-gray); }
-
-  .research-date {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: 0.06em;
-    color: var(--mid-gray);
-    padding-top: 4px;
-  }
-
-  .research-title {
-    font-size: 1.05rem;
-    font-weight: 500;
-    margin-bottom: 0.4rem;
-    color: var(--black);
-  }
-
-  .research-desc {
-    font-size: 0.92rem;
-    color: var(--dark-gray);
-    line-height: 1.65;
-  }
-
-  .tag {
-    display: inline-block;
-    font-family: var(--mono);
-    font-size: 10px;
-    font-weight: 300;
-    letter-spacing: 0.07em;
-    padding: 3px 9px;
-    border: 0.5px solid var(--light-gray);
-    color: var(--mid-gray);
-    margin-top: 0.75rem;
-    margin-right: 4px;
-  }
-
-  /* PROJECTS */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  .project-card {
-    border: 0.5px solid var(--light-gray);
-    padding: 1.75rem;
-    transition: border-color 0.2s;
-  }
-  .project-card:hover { border-color: var(--mid-gray); }
-
-  .project-num {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: 0.08em;
-    color: var(--mid-gray);
-    margin-bottom: 1rem;
-  }
-
-  .project-title {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 0.6rem;
-    line-height: 1.3;
-  }
-
-  .project-desc {
-    font-size: 0.88rem;
-    color: var(--dark-gray);
-    line-height: 1.65;
-    margin-bottom: 1.25rem;
-  }
-
-  .project-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-
-  /* CONTACT */
-  #contact {
-    border-top: 0.5px solid var(--light-gray);
-    text-align: center;
-  }
-
-  .contact-heading {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    margin-bottom: 1rem;
-    line-height: 1.1;
-  }
-
-  .contact-heading em { font-style: italic; color: var(--mid-gray); }
-
-  .contact-sub {
-    font-size: 1rem;
-    color: var(--mid-gray);
-    margin-bottom: 2.5rem;
-  }
-
-  .contact-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* FOOTER */
-  footer {
-    border-top: 0.5px solid var(--light-gray);
-    padding: 1.5rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: var(--max);
-    margin: 0 auto;
-  }
-
-  .footer-text {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: 0.06em;
-    color: var(--mid-gray);
-  }
-
-  @media (max-width: 640px) {
-    nav { padding: 0 1.25rem; }
-    .nav-links { gap: 1.2rem; }
-    section { padding: 4rem 1.25rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .skills-grid { grid-template-columns: 1fr 1fr; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .research-item { grid-template-columns: 1fr; gap: 0.5rem; }
-  }
-</style> -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shaine — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -405,7 +30,7 @@
   <div class="hero-links">
     <a href="#projects" class="btn filled">View Projects</a>
     <a href="#contact" class="btn">Get in Touch</a>
-    <a href="#" class="btn">Resume ↓</a>
+    <a href="Resume_ShaineWei.pdf" class="btn">Resume ↓</a>
   </div>
 </section>
 
@@ -471,11 +96,6 @@
 
   <div class="research-item">
     <span class="research-date">2024</span>
-    <div>
-      <p class="research-title">Bass Connections — Applicant</p>
-      <p class="research-desc">Applied to Duke's Bass Connections interdisciplinary program, targeting projects in global surgery access ("Democratizing Gastroschisis Care in Uganda") and immersive medical training ("VR for Medical Trainees"). Focus on accessible healthcare engineering and collaborative research.</p>
-      <span class="tag">Global Health</span><span class="tag">Medical Devices</span><span class="tag">VR</span>
-    </div>
   </div>
 </section>
 
@@ -561,20 +181,35 @@
   </div>
 </section>
 
+<!-- RESUME -->
+<section id="resume">
+  <p class="section-label">Resume</p>
+  <div class="resume-card">
+    <div class="resume-card-text">
+      <h3>Curriculum Vitae</h3>
+      <p>Full resume available for download. Includes coursework, experience, skills, and extracurriculars. Last updated Spring 2025.</p>
+    </div>
+    <a href="Resume_ShaineWei.pdf" target="_blank" class="btn filled">Download PDF ↓</a>
+  </div>
+  <div class="resume-preview">
+    <!-- <p class="resume-preview-note">Drop resume.pdf into the project folder to enable preview</p> -->
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <p class="section-label" style="justify-content:center;">Contact</p>
   <h2 class="contact-heading">Let's work<br><em>together.</em></h2>
   <p class="contact-sub">Open to research, internships, and collaborations.</p>
   <div class="contact-links">
-    <a href="mailto:your@email.com" class="btn filled">Email Me</a>
-    <a href="https://linkedin.com/in/yourhandle" class="btn">LinkedIn</a>
-    <a href="https://github.com/yourhandle" class="btn">GitHub</a>
+    <a href="sw676@duke.edu" class="btn filled">Email Me</a>
+    <a href="https://linkedin.com/in/shaine-wei" class="btn">LinkedIn</a>
+    <a href="https://github.com/shoewhen" class="btn">GitHub</a>
   </div>
 </section>
 
 <footer>
-  <span class="footer-text">Shaine — Duke University 2028</span>
+  <span class="footer-text">Shaine — Duke University 2029</span>
   <span class="footer-text">Built with HTML &amp; CSS</span>
 </footer>
 
