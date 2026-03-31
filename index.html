@@ -1,148 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuwen Wei</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shaine — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css" />
+<!-- <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white: #ffffff;
+    --off-white: #f7f6f3;
+    --light-gray: #e8e6e1;
+    --mid-gray: #9b9894;
+    --dark-gray: #2e2c29;
+    --black: #111110;
+    --serif: 'EB Garamond', Georgia, serif;
+    --mono: 'DM Mono', monospace;
+    --max: 860px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--black);
+    background: var(--white);
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 0.5px solid var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+    height: 56px;
+  }
+
+  .nav-name {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--mid-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--black); }
+
+  /* SECTIONS */
+  section {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 6rem 2.5rem;
+  }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+    padding-top: 8rem;
+    border-bottom: 0.5px solid var(--light-gray);
+  }
+
+  .hero-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--mid-gray);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-name {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--mid-gray);
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    line-height: 1.75;
+  }
+
+  .hero-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    padding: 10px 20px;
+    border: 0.5px solid var(--black);
+    color: var(--black);
+    background: transparent;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .btn:hover { background: var(--black); color: var(--white); }
+  .btn.filled { background: var(--black); color: var(--white); }
+  .btn.filled:hover { background: transparent; color: var(--black); }
+
+  /* SECTION HEADERS */
+  .section-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    color: var(--mid-gray);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--light-gray);
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--dark-gray);
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+  }
+
+  .about-details { padding-top: 0.25rem; }
+
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.75rem 0;
+    border-bottom: 0.5px solid var(--light-gray);
+    font-size: 0.9rem;
+  }
+  .detail-row:first-child { border-top: 0.5px solid var(--light-gray); }
+  .detail-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--mid-gray);
+    text-transform: uppercase;
+  }
+  .detail-value { color: var(--dark-gray); font-size: 0.95rem; }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .skill-group-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--mid-gray);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid var(--light-gray);
+  }
+
+  .skill-list {
+    list-style: none;
+  }
+
+  .skill-list li {
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+    padding: 0.35rem 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .skill-list li::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: var(--mid-gray);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* RESEARCH */
+  .research-item {
+    padding: 2rem 0;
+    border-bottom: 0.5px solid var(--light-gray);
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 2rem;
+  }
+  .research-item:first-of-type { border-top: 0.5px solid var(--light-gray); }
+
+  .research-date {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--mid-gray);
+    padding-top: 4px;
+  }
+
+  .research-title {
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: var(--black);
+  }
+
+  .research-desc {
+    font-size: 0.92rem;
+    color: var(--dark-gray);
+    line-height: 1.65;
+  }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.07em;
+    padding: 3px 9px;
+    border: 0.5px solid var(--light-gray);
+    color: var(--mid-gray);
+    margin-top: 0.75rem;
+    margin-right: 4px;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    border: 0.5px solid var(--light-gray);
+    padding: 1.75rem;
+    transition: border-color 0.2s;
+  }
+  .project-card:hover { border-color: var(--mid-gray); }
+
+  .project-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--mid-gray);
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+
+  .project-desc {
+    font-size: 0.88rem;
+    color: var(--dark-gray);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  /* CONTACT */
+  #contact {
+    border-top: 0.5px solid var(--light-gray);
+    text-align: center;
+  }
+
+  .contact-heading {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .contact-heading em { font-style: italic; color: var(--mid-gray); }
+
+  .contact-sub {
+    font-size: 1rem;
+    color: var(--mid-gray);
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 0.5px solid var(--light-gray);
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+
+  .footer-text {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--mid-gray);
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 1.25rem; }
+    .nav-links { gap: 1.2rem; }
+    section { padding: 4rem 1.25rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .research-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  }
+</style> -->
 </head>
 <body>
-    
-    <header>
-        <h2 class="logo">shuwen.</h2>
-        <nav class="navigation">
-            <a href="#intro">Home</a>
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-        </nav>
-        <img src="components/blue-hearts.png" width="110">
-    </header>
 
-    <section id="intro">
-        <div class="intro-content">
-            <div class="greeting">
-                <p data-aos="fade-right" data-aos-duration="1000">Hi! My name is</p>
-                <h1 data-aos="fade-right" data-aos-duration="1000">Shuwen Wei</h1>
-                <div class="alignment" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="box">
-                        <a href="#about" class="rotate-text">
-                            <div class="text">
-                                <p>Scroll Down Scroll Down Scroll Down</p>
-                            </div>
-                            <script>
-                                const text = document.querySelector('.text p');
-                                text.innerHTML = text.innerText.split('').map(
-                                    (char, i) =>
-                                    `<span style="transform:rotate(${i * 10}deg)">${char}</span>`
-                                ).join('');
-                            </script>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <img id="intro-img" src="components/miffy-portrait.png" data-aos="fade-up" data-aos-duration="1500">
-            <div class="message">
-                <p data-aos="fade-left" data-aos-duration="1000">High schooler passionate about</p>
-                <h1 data-aos="fade-left" data-aos-duration="1250">Computer Science</h1>
-                <p data-aos="fade-left" data-aos-duration="1500">
-                    Welcome to my little corner of the internet!
-                    <br>
-                    <br>
-                </p>
-                <p data-aos="fade-left" data-aos-duration="1750">
-                    Feel free to explore this website
-                    and discover more about my journey
-                    and interests :)
-                </p>
-                <div class="socials" data-aos="fade-left" data-aos-duration="2000">
-                    <a href="https://github.com/shoewhen" target="_blank">
-                        <img src="components/github-icon.png" class="socials-link-icon">
-                    </a>
-                    <a href="https://www.instagram.com/shaine.wei/" target="_blank">
-                        <img src="components/insta-icon.PNG" class="insta-link-icon">
-                    </a>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
+<nav>
+  <a class="nav-name" href="#hero">Shaine —</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <section class="break">
+<!-- HERO -->
+<section id="hero">
+  <p class="hero-tag">Duke University · Class of 2029</p>
+  <h1 class="hero-name">Shaine<br><em>Portfolio</em></h1>
+  <p class="hero-desc">
+    First-year undergraduate studying Mechanical &amp; Biomedical Engineering with a Mathematics minor. Interested in accessible healthcare, computational design, and interdisciplinary problem-solving.
+  </p>
+  <div class="hero-links">
+    <a href="#projects" class="btn filled">View Projects</a>
+    <a href="#contact" class="btn">Get in Touch</a>
+    <a href="#" class="btn">Resume ↓</a>
+  </div>
+</section>
 
-    </section>
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">About</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a first-year at Duke University studying Mechanical and Biomedical Engineering, with a minor in Mathematics. My work sits at the intersection of engineering design, quantitative analysis, and real-world impact.</p>
+      <p>I'm drawn to problems where engineering can expand access — whether in healthcare delivery, physical systems design, or community-oriented technology. Outside of coursework, I organize HackDuke Code for Good and play music.</p>
+      <p>Currently looking for summer research or internship opportunities in engineering, med-tech, or adjacent fields.</p>
+    </div>
+    <div class="about-details">
+      <div class="detail-row">
+        <span class="detail-label">University</span>
+        <span class="detail-value">Duke University</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Year</span>
+        <span class="detail-value">First-year (Class of 2029)</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Major</span>
+        <span class="detail-value">ME + BME</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Minor</span>
+        <span class="detail-value">Mathematics</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Location</span>
+        <span class="detail-value">Durham, NC</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Interests</span>
+        <span class="detail-value">Med-tech, Design, Music</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="about">
-        <div class="desc">
-            <div class="hello" data-aos="fade-up" data-aos-duration="1500">
-                <h1>Hey there! My name is </h1>
-                <span>Shuwen</span>
-            </div>
-            <p data-aos="fade-up" data-aos-duration="2000">I'm a high school student in the states and I've been living here ever 
-                since I was little, but I originally moved here from China. I've got a passion 
-                for designing and programming, and I hope to further expand my knowledge in these 
-                areas :-)</p>
-        </div>
-        <div class="attributes">
-            <div class="attributes-one">
-                <span class="topic" data-aos="fade-up" data-aos-duration="2000">> Name: </span>
-                <span class="topic-content" data-aos="fade-up" data-aos-duration="2000">Shuwen Wei</span>
-                <br>
-                <br>
-                <br>
-                <span class="topic" data-aos="fade-up" data-aos-duration="2250">> Age: </span>
-                <span class="topic-content" data-aos="fade-up" data-aos-duration="2250">16</span>
-                <br>
-                <br>
-                <br>
-                <span class="topic" data-aos="fade-up" data-aos-duration="2500">> Species: </span>
-                <span class="topic-content" data-aos="fade-up" data-aos-duration="2500">Overworked sheep</span>
-                <br>
-                <br>
-                <br>
-                <span class="topic" data-aos="fade-up" data-aos-duration="2750">> Spawn Points: </span>
-                <span class="topic-content" data-aos="fade-up" data-aos-duration="2750">Duffield Hall</span>
-            </div>
-            <img class="about-img" src="components/shaine.PNG" data-aos="fade-up" data-aos-duration="2500">
-            <div class="attributes-two">
-                <span class="topic" data-aos="fade-up" data-aos-duration="2000">> Likes: </span>
-                <span class="topic-content" data-aos="fade-up" data-aos-duration="2000">Mitski, Smiskis, toe socks </span>
-                <br>
-                <br>
-                <br>
-                <span class="topic" data-aos="fade-up" data-aos-duration="2250">> Dislikes: </span>
-                <span class="topic-content" data-aos="fade-up" data-aos-duration="2250">JS page transitions</span>
-                <br>
-                <br>
-                <br>
-                <span class="topic" data-aos="fade-up" data-aos-duration="2500">> Powers: </span>
-                <span class="topic-content" data-aos="fade-up" data-aos-duration="2500">Roblox Arsenal god</span>
-                <br>
-                <br>
-                <br>
-                <span class="topic" data-aos="fade-up" data-aos-duration="2750">> Weaknesses: </span>
-                <span class="topic-content" data-aos="fade-up" data-aos-duration="2750">Kryptonite</span>
-            </div>
-            </div>
-        </div>
-    </section>
+<!-- RESEARCH -->
+<section id="research">
+  <p class="section-label">Research &amp; Experience</p>
 
-    <section class="break">
+  <div class="research-item">
+    <span class="research-date">2024 – Present</span>
+    <div>
+      <p class="research-title">HackDuke Code for Good — Organizer</p>
+      <p class="research-desc">Organized Duke's annual civic tech hackathon (March 2025). Managed participant database in PostgreSQL/pgAdmin 4, built bulk confirmation scripts, and handled logistics for 200+ participants across nonprofit-focused project tracks.</p>
+      <span class="tag">PostgreSQL</span><span class="tag">Event Ops</span><span class="tag">Civic Tech</span>
+    </div>
+  </div>
 
-    </section>
+  <div class="research-item">
+    <span class="research-date">Fall 2024</span>
+    <div>
+      <p class="research-title">Concrete Canoe — EGR101, Duke ASCE</p>
+      <p class="research-desc">Designed and prototyped a reinforced concrete canoe from scratch. Team's prototype served as the blueprint for Duke's ASCE chapter entry at national competition — the chapter's return to nationals after a multi-year absence. Work spanned mix design, buoyancy testing, and iterative prototyping.</p>
+      <span class="tag">Structural Design</span><span class="tag">Materials</span><span class="tag">Buoyancy Analysis</span>
+    </div>
+  </div>
 
-    <section id="work">
-        <div class="work">
-            <h1 data-aos="fade-up" data-aos-duration="2000">My Work</h1>
-            <p data-aos="fade-up" data-aos-duration="2000">Here are some of my projects that I'm currently working on/worked on in the past :]</p>
-        </div>
-    </section>
+  <div class="research-item">
+    <span class="research-date">2024</span>
+    <div>
+      <p class="research-title">Bass Connections — Applicant</p>
+      <p class="research-desc">Applied to Duke's Bass Connections interdisciplinary program, targeting projects in global surgery access ("Democratizing Gastroschisis Care in Uganda") and immersive medical training ("VR for Medical Trainees"). Focus on accessible healthcare engineering and collaborative research.</p>
+      <span class="tag">Global Health</span><span class="tag">Medical Devices</span><span class="tag">VR</span>
+    </div>
+  </div>
+</section>
 
-    <script src="main.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="section-label">Projects</p>
+  <div class="projects-grid">
+    <div class="project-card">
+      <p class="project-num">01</p>
+      <p class="project-title">Concrete Canoe Prototype</p>
+      <p class="project-desc">Engineered a seaworthy concrete canoe for EGR101. Selected mix proportions for buoyancy, ran stress tests, and documented the build process — resulting in a design adopted for national ASCE competition.</p>
+      <div class="project-tags">
+        <span class="tag">Structural</span><span class="tag">CAD</span><span class="tag">Prototyping</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <p class="project-num">02</p>
+      <p class="project-title">HackDuke Registration System</p>
+      <p class="project-desc">Built and maintained the participant management backend for Code for Good 2025. Includes PostgreSQL schema design, bulk email scripting, and Google Sheets filtering pipelines for 200+ attendees.</p>
+      <div class="project-tags">
+        <span class="tag">PostgreSQL</span><span class="tag">Python</span><span class="tag">Automation</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <p class="project-num">03</p>
+      <p class="project-title">Dipole Field Geometry — Math Exploration</p>
+      <p class="project-desc">Independent exploration in multivariable calculus connecting gradient vector fields and equipotential curves to dipole field geometry. Bridged physical intuition and formal mathematical analysis.</p>
+      <div class="project-tags">
+        <span class="tag">Math</span><span class="tag">Vector Fields</span><span class="tag">Physics</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <p class="project-num">04</p>
+      <p class="project-title">This Portfolio</p>
+      <p class="project-desc">Designed and built from scratch — clean, minimal, and deployable via GitHub Pages. No frameworks, just thoughtful HTML, CSS, and a focus on readability over decoration.</p>
+      <div class="project-tags">
+        <span class="tag">HTML/CSS</span><span class="tag">GitHub Pages</span><span class="tag">Web Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">Skills</p>
+  <div class="skills-grid">
+    <div>
+      <p class="skill-group-label">Engineering</p>
+      <ul class="skill-list">
+        <li>Mechanical design</li>
+        <li>CAD / Solidworks</li>
+        <li>Structural analysis</li>
+        <li>Materials science</li>
+        <li>Buoyancy & fluid statics</li>
+        <li>Prototyping & iteration</li>
+      </ul>
+    </div>
+    <div>
+      <p class="skill-group-label">Computation &amp; Math</p>
+      <ul class="skill-list">
+        <li>Multivariable calculus</li>
+        <li>Linear algebra</li>
+        <li>Python</li>
+        <li>MATLAB</li>
+        <li>PostgreSQL</li>
+        <li>Data analysis</li>
+      </ul>
+    </div>
+    <div>
+      <p class="skill-group-label">Other</p>
+      <ul class="skill-list">
+        <li>Technical writing</li>
+        <li>Event &amp; project management</li>
+        <li>Google Workspace</li>
+        <li>HTML / CSS</li>
+        <li>Music</li>
+        <li>Cross-cultural communication</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label" style="justify-content:center;">Contact</p>
+  <h2 class="contact-heading">Let's work<br><em>together.</em></h2>
+  <p class="contact-sub">Open to research, internships, and collaborations.</p>
+  <div class="contact-links">
+    <a href="mailto:your@email.com" class="btn filled">Email Me</a>
+    <a href="https://linkedin.com/in/yourhandle" class="btn">LinkedIn</a>
+    <a href="https://github.com/yourhandle" class="btn">GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-text">Shaine — Duke University 2028</span>
+  <span class="footer-text">Built with HTML &amp; CSS</span>
+</footer>
+
 </body>
 </html>
