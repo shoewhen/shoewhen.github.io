@@ -2,217 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shaine — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shaine Wei is a Duke engineering student working across biomedical engineering, mechanical design, and research." />
+  <title>Shaine Wei | About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Shaine Wei, About">SW<span>.</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-resume" href="Resume_ShaineWei.pdf" target="_blank" rel="noreferrer">Resume <span aria-hidden="true">↗</span></a>
+  </header>
 
-<nav>
-  <a class="nav-name" href="#hero">Shaine —</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#research">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <main>
+    <section class="intro" id="about">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> DUKE UNIVERSITY <span class="eyebrow-divider">/</span> CLASS OF 2029</p>
+        <h1>Shaine<br /><span>Wei</span></h1>
+        <p class="intro-lede">Engineering ideas into things that work.</p>
+        <p class="intro-body">I'm a Mechanical and Biomedical Engineering student at Duke, with a minor in Mathematics. I like working where biology meets design: from neurovascular research and environmental health to mechanisms, devices, and software built for people.</p>
+        <div class="intro-actions">
+          <a class="button button-primary" href="projects.html">Explore projects <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="Resume_ShaineWei.pdf" target="_blank" rel="noreferrer">Download resume <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="availability"><span class="availability-mark"></span> Open to research and internship opportunities</p>
+      </div>
+      <figure class="portrait-wrap">
+        <div class="portrait-frame"><img src="assets/chapel_headshot.jpg" alt="Portrait of Shaine Wei" /></div>
+        <figcaption><span>ITHACA, NEW YORK</span><span>36°00' N / 78°56' W</span></figcaption>
+        <span class="portrait-index" aria-hidden="true">01 / 03</span>
+      </figure>
+    </section>
 
-<!-- HERO -->
-<section id="hero">
-  <p class="hero-tag">Duke University · Class of 2029</p>
-  <h1 class="hero-name">Shaine Wei<br><em>Portfolio</em></h1>
-  <p class="hero-desc">
-    First-year undergraduate student at Duke University studying Mechanical &amp; Biomedical Engineering with a Mathematics minor. Interested in medical device design, biomechanics, and building things that work at the intersection of biology and engineering.
-  </p>
-  <div class="hero-links">
-    <a href="#projects" class="btn filled">View Projects</a>
-    <a href="#contact" class="btn">Get in Touch</a>
-    <a href="Resume_ShaineWei.pdf" class="btn">Resume ↓</a>
-  </div>
-</section>
+    <section class="education-band" aria-label="Education">
+      <div class="education-inner page-wrap">
+        <div><span class="meta-label">EDUCATION</span><strong>Duke University</strong><span>Pratt School of Engineering</span></div>
+        <div><span class="meta-label">DEGREE</span><strong>B.S.E. Mechanical &amp; Biomedical Engineering</strong><span>Minor in Mathematics</span></div>
+        <div><span class="meta-label">ACADEMICS</span><strong>3.87 GPA <span class="lime-star" aria-hidden="true">*</span></strong><span>BME Design Fellow · Dean's List</span></div>
+      </div>
+    </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <p class="section-label">About</p>
-  <div class="about-grid">
-    <div class="about-text">
-  <p>I'm a first-year at Duke's Pratt School of Engineering studying Biomedical and Mechanical Engineering, with a minor in Mathematics. My work spans neuroscience research, engineering design, and software development.</p>
-  <p>I've worked in a Cornell neurovascular lab studying Alzheimer's disease, built competition robots, led student organizations, and now contribute to HackDuke's full-stack event platform. I'm drawn to problems at the intersection of biology, engineering, and access.</p>
-  <p>Currently looking for summer research or internship opportunities in mechanical engineering, biomedical engineering, med-tech, or adjacent fields.</p>
-</div>
+    <section class="resume-strip page-wrap" aria-label="Resume">
+      <div class="resume-mark" aria-hidden="true">CV</div>
+      <div class="resume-copy"><p class="eyebrow">THE FULL STORY</p><h2>Resume</h2><p>Coursework, experience, technical skills, and more.</p></div>
+      <a class="button button-outline" href="Resume_ShaineWei.pdf" target="_blank" rel="noreferrer">View PDF <span aria-hidden="true">↗</span></a>
+    </section>
 
-<!-- details column -->
-<div class="about-details">
-  <div class="detail-row"><span class="detail-label">University</span><span class="detail-value">Duke University</span></div>
-  <div class="detail-row"><span class="detail-label">Graduation</span><span class="detail-value">May 2029 (expected)</span></div>
-  <div class="detail-row"><span class="detail-label">Major</span><span class="detail-value">BME + ME</span></div>
-  <div class="detail-row"><span class="detail-label">Minor</span><span class="detail-value">Mathematics</span></div>
-  <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value">Durham, NC</span></div>
-  <div class="detail-row"><span class="detail-label">Languages</span><span class="detail-value">English, Mandarin</span></div>
-</div>
-  </div>
-</section>
+    <section class="content-section" id="experience">
+      <div class="section-heading"><div><p class="eyebrow">01 / WHERE I'VE BEEN</p><h2>Experience</h2></div><p class="section-note">Research, communication, and building with teams.</p></div>
+      <div class="experience-list">
+        <article class="experience-row">
+          <p class="experience-date">SEP 2026 — NOW</p>
+          <div class="experience-main"><div class="experience-title-line"><h3>Undergraduate Research Assistant</h3><span class="place">EBC Laboratory · Duke University</span></div><p>Analyze human biological samples for air-pollution exposure biomarkers using mass spectrometry and chromatography. Contribute to research connecting environmental toxicant exposure with adverse health outcomes.</p><div class="tag-row"><span>Environmental Health</span><span>Mass Spectrometry</span><span>Chromatography</span></div></div>
+        </article>
+        <article class="experience-row">
+          <p class="experience-date">SEP 2025 — NOW</p>
+          <div class="experience-main"><div class="experience-title-line"><h3>Co-Director &amp; Tech Team Lead</h3><span class="place">HackDuke · Duke University</span></div><p>Help lead the executive team behind Duke's annual hackathon, coordinating logistics for 200+ attendees. Guide development of the React, Python, and PostgreSQL event platform, and mentor new developers through workshops and code reviews.</p><div class="tag-row"><span>Leadership</span><span>React</span><span>Python</span><span>PostgreSQL</span></div></div>
+        </article>
+        <article class="experience-row">
+          <p class="experience-date">SEP 2025 — NOW</p>
+          <div class="experience-main"><div class="experience-title-line"><h3>Technical Communications Assistant</h3><span class="place">Mechanical Engineering &amp; Materials Science · Duke</span></div><p>Lead production of the bi-semester undergraduate newsletter with faculty and research groups, translating technical research into clear, accessible stories for students.</p><div class="tag-row"><span>Science Writing</span><span>Communications</span></div></div>
+        </article>
+        <article class="experience-row">
+          <p class="experience-date">JUL — AUG 2024</p>
+          <div class="experience-main"><div class="experience-title-line"><h3>Research Intern</h3><span class="place">Schaffer-Nishimura Lab · Cornell University</span></div><p>Studied neurovascular function and brain blood flow using confocal and two-photon microscopy. Applied immunofluorescent techniques to visualize neurovascular structures in Alzheimer's disease research.</p><div class="tag-row"><span>Neurovascular Research</span><span>Microscopy</span><span>Immunofluorescence</span></div></div>
+        </article>
+        <article class="experience-row">
+          <p class="experience-date">APR 2022 — AUG 2023</p>
+          <div class="experience-main"><div class="experience-title-line"><h3>STEP Research Intern</h3><span class="place">Cornell University</span></div><p>Rotated through machine-learning research, wave-energy-converter manufacturing, and tissue isolation and immunofluorescence for breast cancer research at the Baker Institute.</p><div class="tag-row"><span>Machine Learning</span><span>Wave Energy</span><span>Lab Research</span></div></div>
+        </article>
+      </div>
+    </section>
 
-<!-- EXPERIENCE -->
-<section id="research">
-  <p class="section-label">Experience</p>
+    <section class="featured-section">
+      <div class="page-wrap">
+        <div class="section-heading"><div><p class="eyebrow">02 / SELECTED WORK</p><h2>Projects</h2></div><a class="text-link" href="projects.html">All projects <span aria-hidden="true">↗</span></a></div>
+        <div class="featured-grid">
+          <a class="featured-card" href="projects/robosub.html"><div class="project-visual visual--robot"><span class="visual-code">DR / 01</span><span class="visual-shape shape-claw" aria-hidden="true"></span><span class="visual-caption">UNDERWATER ROBOTICS</span></div><div class="featured-info"><span class="project-type">MECHANICAL DESIGN</span><h3>RoboSub AUV Claw</h3><span class="card-arrow" aria-hidden="true">↗</span></div></a>
+          <a class="featured-card" href="projects/wilson-camera.html"><div class="project-visual visual--camera"><span class="visual-code">DU / 02</span><span class="visual-shape shape-camera" aria-hidden="true"></span><span class="visual-caption">PROTOTYPE SYSTEM</span></div><div class="featured-info"><span class="project-type">DESIGN &amp; FABRICATION</span><h3>Climbing Wall Camera Mount</h3><span class="card-arrow" aria-hidden="true">↗</span></div></a>
+          <a class="featured-card" href="projects/sunflower-sheller.html"><div class="project-visual visual--sheller project-visual--photo"><img class="project-cover" src="assets/projects/dc2/dc2_final_assembly.png" alt="Final assembly of the sunflower shelling machine" /><span class="visual-code">EGR / 03</span><span class="visual-caption">MECHANICAL SYSTEM</span></div><div class="featured-info"><span class="project-type">SOLIDWORKS · 3D PRINTING</span><h3>Sunflower Shelling Machine</h3><span class="card-arrow" aria-hidden="true">↗</span></div></a>
+        </div>
+      </div>
+    </section>
 
-  <div class="research-item">
-    <span class="research-date">Sep 2025 – Present</span>
-    <div>
-      <p class="research-title">Technical Communications Assistant — Duke MEMS</p>
-      <p class="research-desc">Lead production of the bi-semester undergraduate newsletter in collaboration with faculty and research groups. Translate technical research into accessible written content for a broad student audience.</p>
-      <span class="tag">Science Writing</span><span class="tag">Communications</span>
-    </div>
-  </div>
-
-  <div class="research-item">
-    <span class="research-date">Jul – Aug 2024</span>
-    <div>
-      <p class="research-title">Research Intern — Schaffer-Nishimura Lab, Cornell University</p>
-      <p class="research-desc">Conducted neurovascular function experiments using confocal and two-photon microscopy to study blood flow in the brain. Applied immunofluorescent techniques to visualize neurovascular structures, contributing to Alzheimer's disease research.</p>
-      <span class="tag">Confocal Microscopy</span><span class="tag">Immunofluorescence</span><span class="tag">Neurovascular</span><span class="tag">Alzheimer's</span>
-    </div>
-  </div>
-
-  <div class="research-item">
-    <span class="research-date">Apr 2022 – Aug 2023</span>
-    <div>
-      <p class="research-title">STEP Research Intern — Cornell University</p>
-      <p class="research-desc">Rotated across three research tracks: AI behavior and machine learning model development; manufacturing of a wave energy converter for sustainable offshore tech; and tissue isolation and immunofluorescence for breast cancer research at the Baker Institute.</p>
-      <span class="tag">Machine Learning</span><span class="tag">Wave Energy</span><span class="tag">Immunofluorescence</span>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <p class="section-label">Projects</p>
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <p class="project-num">01</p>
-      <p class="project-title">Wilson Climbing Wall Camera Project</p>
-      <p class="project-desc">Developing a 3D-printed mounting system for Duke University’s Wilson Gym climbing wall camera project. Designing and iterating adjustable prototypes to securely mount a Raspberry Pi, camera module, and supporting electronics to the climbing wall while balancing durability, modularity, and ease of installation. Modeling articulated hinge mechanisms, hardware mounting features, and custom-fit enclosures in SolidWorks to support rapid prototyping, testing, and future system integration.</p>
-      <div class="project-tags"><span class="tag">SolidWorks</span><span class="tag">3D Printing</span><span class="tag">Rapid Prototyping</span></div>
-    </div>
-    
-    <div class="project-card">
-      <p class="project-num">01</p>
-      <p class="project-title">Rube Goldberg Machine</p>
-      <p class="project-desc">Designed and developed a multi-stage electromechanical Rube Goldberg system as part of a 15-person engineering team. Led the design and integration of an elevator-based mechanism using Arduino-controlled sensors, motorized motion systems, and interactive outputs to transfer objects between autonomous machines. Collaborated across teams to ensure reliable system timing, cohesive functionality, and an engaging final performance.</p>
-      <div class="project-tags"><span class="tag">SolidWorks</span><span class="tag">Arduino</span><span class="tag">Electronics</span><span class="tag">Mechanical Design</span></div>
-    </div>
-
-    <div class="project-card">
-      <p class="project-num">01</p>
-      <p class="project-title">Sunflower Shelling Machine</p>
-      <p class="project-desc">Lead designer on a human-operated shelling machine achieving 2nd highest performance in a 30+ student class. Engineered a fully 3D-printed kernel/shell separation system with a gear-driven dual-roller compression mechanism modeled in SolidWorks.</p>
-      <div class="project-tags"><span class="tag">SolidWorks</span><span class="tag">3D Printing</span><span class="tag">Mechanical Design</span></div>
-    </div>
-
-    <div class="project-card">
-      <p class="project-num">02</p>
-      <p class="project-title">Mini Concrete Canoe Prototype</p>
-      <p class="project-desc">Co-developed a scaled prototype for Duke ASCE's national competition canoe. Optimized a lightweight concrete mix achieving 909.71 PSI compressive strength at 28 days, verified via hydraulic press testing.</p>
-      <div class="project-tags"><span class="tag">Structural Design</span><span class="tag">Materials Testing</span><span class="tag">Buoyancy Analysis</span></div>
-    </div>
-
-    <div class="project-card">
-      <p class="project-num">03</p>
-      <p class="project-title">HackDuke Event Platform</p>
-      <p class="project-desc">Full-stack developer on HackDuke's event platform. Built and maintained frontend (React) and backend (Python) systems, including a participant registration portal and PostgreSQL database supporting 200+ annual attendees.</p>
-      <div class="project-tags"><span class="tag">React</span><span class="tag">Python</span><span class="tag">PostgreSQL</span></div>
-    </div>
-
-    <div class="project-card">
-      <p class="project-num">04</p>
-      <p class="project-title">FIRST Robotics — Code Red Robotics</p>
-      <p class="project-desc">Four years designing, assembling, and iteratively improving competition robot subsystems. Managed operations for a team of 80 students and led a rookie mentoring program to improve onboarding and technical skill development.</p>
-      <div class="project-tags"><span class="tag">Robotics</span><span class="tag">Mechanical Integration</span><span class="tag">Leadership</span></div>
-    </div>
-
-    <!-- <div class="project-card">
-      <p class="project-num">05</p>
-      <p class="project-title">Fully Fledged</p>
-      <p class="project-desc">Four years designing, assembling, and iteratively improving competition robot subsystems. Managed operations for a team of 80 students and led a rookie mentoring program to improve onboarding and technical skill development.</p>
-      <div class="project-tags"><span class="tag">Robotics</span><span class="tag">Mechanical Integration</span><span class="tag">Leadership</span></div>
-    </div>
-  </div> -->
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <p class="section-label">Skills</p>
-  <div class="skills-grid">
-    <div>
-      <p class="skill-group-label">Engineering & Lab</p>
-      <ul class="skill-list">
-        <li>SolidWorks, Fusion 360, Onshape</li>
-        <li>3D printing, laser cutting</li>
-        <li>PCR, gel electrophoresis</li>
-        <li>Immunohistochemistry</li>
-        <li>Confocal & two-photon microscopy</li>
-        <li>Hydraulic & buoyancy testing</li>
+    <section class="content-section organizations-section" id="organizations">
+      <div class="section-heading"><div><p class="eyebrow">03 / WITH THE COMMUNITY</p><h2>Organizations</h2></div><p class="section-note">Learning, building, and showing up together.</p></div>
+      <ul class="organization-list">
+        <li>American Society of Mechanical Engineers <span>ASME</span></li>
+        <li>Biomedical Engineering Society <span>BMES</span></li>
+        <li>Duke Electric Vehicles <span>DUKE EV</span></li>
+        <li>Duke eNable <span>ASSISTIVE TECH</span></li>
+        <li>Duke Robotics Club <span>ROBOTICS</span></li>
+        <li>HackDuke <span>TECH TEAM LEAD</span></li>
+        <li>Society of Women Engineers <span>SWE</span></li>
+        <li>Code Red Robotics <span>FIRST ROBOTICS</span></li>
       </ul>
-    </div>
+    </section>
 
-    <div>
-      <p class="skill-group-label">Software & Data</p>
-      <ul class="skill-list">
-        <li>Python, Java, R</li>
-        <li>HTML / CSS / JavaScript</li>
-        <li>React</li>
-        <li>PostgreSQL</li>
-        <li>Git</li>
-        <li>Excel, LaTeX</li>
-      </ul>
-    </div>
+    <section class="skills-band">
+      <div class="page-wrap skills-inner">
+        <div><p class="eyebrow">A FEW THINGS IN MY TOOLKIT</p><h2>Skills</h2></div>
+        <div class="skills-copy"><p><strong>Engineering &amp; fabrication</strong> SolidWorks, Fusion 360, Inventor, Onshape, 3D printing, laser cutting, woodworking</p><p><strong>Lab &amp; analysis</strong> PCR, gel electrophoresis, immunohistochemistry, microscopy, mass spectrometry, chromatography, R/Python data analysis</p><p><strong>Software &amp; tools</strong> Python, Java, R, HTML/CSS, JavaScript, React, PostgreSQL, Git, Arduino, Excel, LaTeX</p><p><strong>Languages</strong> English (fluent), Mandarin Chinese (conversational)</p></div>
+      </div>
+    </section>
+  </main>
 
-    <div>
-      <p class="skill-group-label">Other</p>
-      <ul class="skill-list">
-        <li>Technical writing</li>
-        <li>Science communication</li>
-        <li>Team & event leadership</li>
-        <li>English (fluent)</li>
-        <li>Mandarin (conversational)</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- RESUME -->
-<section id="resume">
-  <p class="section-label">Resume</p>
-  <div class="resume-card">
-    <div class="resume-card-text">
-      <h3>Curriculum Vitae</h3>
-      <p>Full resume available for download. Includes coursework, experience, skills, and extracurriculars. Last updated Spring 2025.</p>
-    </div>
-    <a href="Resume_ShaineWei.pdf" target="_blank" class="btn filled">Download PDF ↓</a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <p class="section-label" style="justify-content:center;">Contact</p>
-  <h2 class="contact-heading">Let's work<br><em>together.</em></h2>
-  <p class="contact-sub">Open to research, internships, and collaborations.</p>
-  <div class="contact-links">
-    <a href="sw676@duke.edu" class="btn filled">Email Me</a>
-    <a href="https://linkedin.com/in/shaine-wei" class="btn">LinkedIn</a>
-    <a href="https://github.com/shoewhen" class="btn">GitHub</a>
-  </div>
-</section>
-
-<footer>
-  <span class="footer-text">Shaine — Duke University 2029</span>
-  <span class="footer-text">Built with HTML &amp; CSS</span>
-</footer>
-
+  <footer class="site-footer page-wrap"><a class="wordmark" href="index.html">SW<span>.</span></a><span>Shaine Wei · Duke University · 2026</span><a href="contact.html">Get in touch <span aria-hidden="true">↗</span></a></footer>
 </body>
 </html>
